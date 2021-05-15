@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Ecommerce.Service.Data.Context;
+using Ecommerce.Service.Interface;
+using Ecommerce.Service.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace Ecommerce.WebApi
 {
@@ -25,6 +22,11 @@ namespace Ecommerce.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<EcommerceContext>();
+
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IService<>), typeof(Service<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
