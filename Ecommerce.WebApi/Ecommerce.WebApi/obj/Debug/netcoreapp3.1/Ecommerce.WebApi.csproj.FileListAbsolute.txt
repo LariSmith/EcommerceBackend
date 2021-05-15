@@ -1,0 +1,10 @@
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Ecommerce.WebApi.exe
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.csprojAssemblyReference.cache
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.AssemblyInfoInputs.cache
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.AssemblyInfo.cs
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.RazorTargetAssemblyInfo.cache
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.WebApi.StaticWebAssets.Manifest.cache
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.WebApi.StaticWebAssets.xml
