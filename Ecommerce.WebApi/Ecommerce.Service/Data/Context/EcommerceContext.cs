@@ -21,9 +21,11 @@ namespace Ecommerce.Service.Data.Context
             optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ecommerceDB;Data Source=DESKTOP-OG3NMRS\\BWDATOOLSET");
         }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.ApplyConfiguration(new EcommerceMap());
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Item>(entity => {
+                entity.HasKey(e => new { e.pedido, e.Produto });
+            });
+        }
     }
 }
