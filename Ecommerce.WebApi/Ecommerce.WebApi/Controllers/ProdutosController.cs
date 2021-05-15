@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Ecommerce.Service.Interface;
-using Ecommerce.Service.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Ecommerce.Service.Data.Context;
+using Ecommerce.Service.Model;
 
 namespace Ecommerce.WebApi.Controllers
 {
@@ -13,16 +14,32 @@ namespace Ecommerce.WebApi.Controllers
     [ApiController]
     public class ProdutosController : ControllerBase
     {
-        private readonly IService<Produto> service;
+        private readonly EcommerceContext _context;
 
-        public ProdutosController(IService<Produto> service)
+        public ProdutosController(EcommerceContext context)
         {
-            this.service = service;
+            _context = context;
         }
 
-        public IEnumerable<Produto> ListarProdutos()
+        // GET: api/Produtos
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Produto>>> Getproduto()
         {
-            return service.Listar();
+            return await _context.produto.ToListAsync();
+        }
+
+        // GET: api/Produtos/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Produto>> GetProduto(int id)
+        {
+            var produto = await _context.produto.FindAsync(id);
+
+            if (produto == null)
+            {
+                return NotFound();
+            }
+
+            return produto;
         }
     }
 }
