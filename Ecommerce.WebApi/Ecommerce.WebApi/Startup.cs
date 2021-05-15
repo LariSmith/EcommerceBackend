@@ -1,4 +1,6 @@
 using Ecommerce.Service.Data.Context;
+using Ecommerce.Service.Interface;
+using Ecommerce.Service.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -22,6 +24,9 @@ namespace Ecommerce.WebApi
             services.AddControllers();
 
             services.AddDbContext<EcommerceContext>();
+
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient(typeof(IService<>), typeof(Service<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
