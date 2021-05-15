@@ -32,8 +32,15 @@ namespace Ecommerce.WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
-            _context.cliente.Add(cliente);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.cliente.Add(cliente);
+                await _context.SaveChangesAsync();
+                
+            } catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e);
+            }
 
             return CreatedAtAction("GetCliente", new { id = cliente.id }, cliente);
         }

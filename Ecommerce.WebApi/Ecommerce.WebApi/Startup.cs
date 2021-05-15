@@ -25,8 +25,16 @@ namespace Ecommerce.WebApi
 
             services.AddDbContext<EcommerceContext>();
 
-            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
-            services.AddTransient(typeof(IService<>), typeof(Service<>));
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(
+                    "v1",
+                    new Microsoft.OpenApi.Models.OpenApiInfo 
+                    { 
+                        Version="v1",
+                        Title="Ecommerce API"
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +48,13 @@ namespace Ecommerce.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ecommerce API");
+            });
 
             app.UseEndpoints(endpoints =>
             {

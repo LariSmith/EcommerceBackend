@@ -160,5 +160,10 @@ D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\net
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.csproj.CoreCompileInputs.cache
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.MvcApplicationPartsAssemblyInfo.cs
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.WebApi\obj\Debug\netcoreapp3.1\Ecommerce.WebApi.MvcApplicationPartsAssemblyInfo.cache
