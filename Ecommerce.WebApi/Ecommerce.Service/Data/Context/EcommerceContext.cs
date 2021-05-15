@@ -10,6 +10,9 @@ namespace Ecommerce.Service.Data.Context
     public class EcommerceContext : DbContext
     {
         public DbSet<Produto> produtos { get; set; }
+        public DbSet<Cliente> clientes { get; set; }
+        public DbSet<Pedido> pedidos { get; set; }
+        public DbSet<Item> itens { get; set; }
 
         public EcommerceContext(DbContextOptions<EcommerceContext> options) : base(options) { }
 
