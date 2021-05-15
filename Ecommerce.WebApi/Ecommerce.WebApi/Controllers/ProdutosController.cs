@@ -22,24 +22,11 @@ namespace Ecommerce.WebApi.Controllers
         }
 
         // GET: api/Produtos
-        [HttpGet]
+        [HttpGet("listar-produtos")]
         public async Task<ActionResult<IEnumerable<Produto>>> Getproduto()
         {
             return await _context.produto.ToListAsync();
         }
 
-        // GET: api/Produtos/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Produto>> GetProduto(int id)
-        {
-            var produto = await _context.produto.FindAsync(id);
-
-            if (produto == null)
-            {
-                return NotFound();
-            }
-
-            return produto;
-        }
     }
 }

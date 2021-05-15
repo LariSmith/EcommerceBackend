@@ -12,20 +12,20 @@ namespace Ecommerce.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ClientesController : ControllerBase
+    public class ItemsController : ControllerBase
     {
         private readonly EcommerceContext _context;
 
-        public ClientesController(EcommerceContext context)
+        public ItemsController(EcommerceContext context)
         {
             _context = context;
         }
 
-        // GET: api/Clientes
-        [HttpGet("listar-cliente")]
-        public async Task<ActionResult<IEnumerable<Cliente>>> GetCliente()
+        // GET: api/Items
+        [HttpGet("listar-itens")]
+        public async Task<ActionResult<IEnumerable<Item>>> Getitem()
         {
-            return await _context.cliente.ToListAsync();
+            return await _context.item.ToListAsync();
         }
 
     }

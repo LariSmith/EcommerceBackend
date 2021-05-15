@@ -8,6 +8,6 @@ namespace Ecommerce.Service.Model
     {
         public int id { get; set; }
         public Cliente cliente { get; set; }
-        public DateTime dataPedido { get; set; }
+        public String dataPedido { get; set; }
     }
 }
