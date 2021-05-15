@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Ecommerce.Service.Data.Context
 {
-    class EcommerceContext : DbContext
+    public class EcommerceContext : DbContext
     {
         public DbSet<Produto> produtos { get; set; }
 
