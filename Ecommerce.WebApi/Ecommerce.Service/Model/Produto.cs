@@ -10,5 +10,6 @@ namespace Ecommerce.Service.Model
         public string nome { get; set; }
         public string preco { get; set; }
         public string descricao { get; set; }
+        public int estoque { get; set; }
     }
 }
