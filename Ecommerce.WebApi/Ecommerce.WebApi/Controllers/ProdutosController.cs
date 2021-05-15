@@ -28,5 +28,15 @@ namespace Ecommerce.WebApi.Controllers
             return await _context.produto.ToListAsync();
         }
 
+        [HttpPost("cadastrar-produto")]
+        public async Task<ActionResult<Pedido>> PostProduto(Produto produto)
+        {
+            _context.produto.Add(produto);
+
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("Getproduto", produto);
+        }
+
     }
 }

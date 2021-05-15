@@ -7,6 +7,7 @@ namespace Ecommerce.Service.Model
     public class Pedido
     {
         public int id { get; set; }
+        public int clienteId { get; set; }
         public Cliente cliente { get; set; }
         public String dataPedido { get; set; }
     }

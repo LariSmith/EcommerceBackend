@@ -6,8 +6,9 @@ namespace Ecommerce.Service.Model
 {
     public class Item
     {
-        public int id { get; set; }
+        public int pedidoId { get; set; }
         public Pedido pedido { get; set; }
+        public int produtoId { get; set; }
         public Produto Produto { get; set; }
         public int quantidade { get; set; }
     }

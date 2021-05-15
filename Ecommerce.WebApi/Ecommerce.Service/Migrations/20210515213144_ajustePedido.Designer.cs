@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommerce.Service.Migrations
 {
     [DbContext(typeof(EcommerceContext))]
-    [Migration("20210515172555_EcommerceMigration")]
-    partial class EcommerceMigration
+    [Migration("20210515213144_ajustePedido")]
+    partial class ajustePedido
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -77,8 +77,8 @@ namespace Ecommerce.Service.Migrations
                     b.Property<int?>("clienteid")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("dataPedido")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("dataPedido")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 

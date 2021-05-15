@@ -1,9 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ecommerce.Service.Migrations
 {
-    public partial class initial : Migration
+    public partial class ajustePedido : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +12,9 @@ namespace Ecommerce.Service.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    cpf = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    cpf = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -28,9 +27,10 @@ namespace Ecommerce.Service.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    preco = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    descricao = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    preco = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    estoque = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -43,8 +43,8 @@ namespace Ecommerce.Service.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    clienteid = table.Column<int>(type: "int", nullable: false),
-                    dataPedido = table.Column<DateTime>(type: "datetime", nullable: false)
+                    clienteid = table.Column<int>(type: "int", nullable: true),
+                    dataPedido = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,8 +63,8 @@ namespace Ecommerce.Service.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    pedidoid = table.Column<int>(type: "int", nullable: false),
-                    Produtoid = table.Column<int>(type: "int", nullable: false),
+                    pedidoid = table.Column<int>(type: "int", nullable: true),
+                    Produtoid = table.Column<int>(type: "int", nullable: true),
                     quantidade = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

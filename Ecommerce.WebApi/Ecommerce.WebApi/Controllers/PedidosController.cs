@@ -48,12 +48,18 @@ namespace Ecommerce.WebApi.Controllers
         public async Task<ActionResult<Pedido>> PostPedido(PedidoViewModel pedido)
         {
             _context.cliente.Add(pedido.cliente);
+            await _context.SaveChangesAsync();
+
+            var cliente = _context.cliente.OrderByDescending(c => c.id).FirstOrDefault();
 
             Pedido Pedido = new Pedido();
 
-            Pedido.cliente = pedido.cliente;
+            Pedido.clienteId = cliente.id;
             Pedido.dataPedido = DateTime.Now.ToString();
             _context.pedido.Add(Pedido);
+            await _context.SaveChangesAsync();
+
+            var p = _context.pedido.OrderByDescending(x => x.id).FirstOrDefault();
 
             foreach (ItemViewModel elemento in pedido.itens)
             {
@@ -66,27 +72,18 @@ namespace Ecommerce.WebApi.Controllers
                     return NotFound();
                 }
 
-                Produto produto = new Produto();
-                produto = elemento.produto;
-                produto.estoque = estoque;
-                produto.id = 0;
+                elemento.produto.estoque = estoque;
 
-                item.Produto = elemento.produto;
-                item.pedido = Pedido;
+                item.produtoId = elemento.produto.id;
+                item.pedidoId = p.id;
                 item.quantidade = elemento.quantidade;
 
-                _context.Entry(elemento.produto).CurrentValues.SetValues(produto);
+                _context.Update(elemento.produto);
 
                 _context.item.Add(item);
             }
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            } catch (Exception e)
-            {
-
-            }
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPedido", new { id = Pedido.id }, Pedido);
         }
