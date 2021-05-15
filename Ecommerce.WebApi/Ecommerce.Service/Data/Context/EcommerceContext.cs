@@ -13,6 +13,11 @@ namespace Ecommerce.Service.Data.Context
 
         public EcommerceContext(DbContextOptions<EcommerceContext> options) : base(options) { }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ecommerce;Data Source=DESKTOP-OG3NMRS\\BWDATOOLSET");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new EcommerceMap());
