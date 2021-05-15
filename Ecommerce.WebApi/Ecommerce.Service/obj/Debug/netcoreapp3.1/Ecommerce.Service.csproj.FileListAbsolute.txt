@@ -6,7 +6,3 @@ D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\ne
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\netcoreapp3.1\Ecommerce.Service.runtimeconfig.json
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\netcoreapp3.1\Ecommerce.Service.runtimeconfig.dev.json
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.genruntimeconfig.cache
-D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\netcoreapp3.1\Ecommerce.Service.pdb
-D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.csproj.CoreCompileInputs.cache
-D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.dll
-D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.pdb
