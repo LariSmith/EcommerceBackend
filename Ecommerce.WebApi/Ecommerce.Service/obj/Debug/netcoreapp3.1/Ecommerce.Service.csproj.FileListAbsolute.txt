@@ -3,3 +3,6 @@ D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\ne
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.csprojAssemblyReference.cache
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.AssemblyInfoInputs.cache
 D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.AssemblyInfo.cs
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\netcoreapp3.1\Ecommerce.Service.runtimeconfig.json
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\bin\Debug\netcoreapp3.1\Ecommerce.Service.runtimeconfig.dev.json
+D:\Repositório\EcommerceBackend\Ecommerce.WebApi\Ecommerce.Service\obj\Debug\netcoreapp3.1\Ecommerce.Service.genruntimeconfig.cache
