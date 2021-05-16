@@ -25,6 +25,17 @@ namespace Ecommerce.WebApi
 
             services.AddDbContext<EcommerceContext>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    name: "AllowOrigin",
+                    builder => {
+                        builder.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
+                    });
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc(
@@ -35,6 +46,8 @@ namespace Ecommerce.WebApi
                         Title="Ecommerce API"
                     });
             });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +57,8 @@ namespace Ecommerce.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("AllowOrigin");
 
             app.UseRouting();
 
