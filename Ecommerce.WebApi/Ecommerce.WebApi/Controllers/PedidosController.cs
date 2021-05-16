@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Ecommerce.Service.Data.Context;
 using Ecommerce.Service.Model;
 using Ecommerce.WebApi.ViewModel;
+using Microsoft.Data.SqlClient;
 
 namespace Ecommerce.WebApi.Controllers
 {
@@ -81,9 +82,9 @@ namespace Ecommerce.WebApi.Controllers
                 _context.Update(elemento.produto);
 
                 _context.item.Add(item);
-            }
 
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            }
 
             return CreatedAtAction("GetPedido", new { id = Pedido.id }, Pedido);
         }
